@@ -1,6 +1,10 @@
+// dont forget to add the limits.h header
+// the stdlib.h header is optional , it depends on how you want to work with return
+
 bool isPalindrome(int x) {
     // Negative numbers and multiples of 10 (except 0) are not palindromes
-    if (x < 0 || (x % 10 == 0 && x != 0)) {
+    if (x < 0 || (x % 10 == 0 && x != 0))  // ====> A negative number cannot be a palindrome because the negative sign is not symmetric.
+    {                                      // ====> A number that ends in 0 (except for 0 itself) cannot be a palindrome.     
         return false;
     }
 
